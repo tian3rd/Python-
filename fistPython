@@ -1,0 +1,12 @@
+def count_if_triple(list_of_ints):
+    count = 0
+    for elem in list_of_ints:
+        if type(elem) == int:
+            if elem != 0 and elem % 3 == 0:
+                count +=1    
+            else:
+                pass
+        elif type(elem) == list:
+            count_if_triple(list(set(elem)))    
+    return count
+        
